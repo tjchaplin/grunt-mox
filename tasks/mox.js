@@ -20,10 +20,11 @@ module.exports = function(grunt) {
     var options = this.options({});
 
     grunt.verbose.writeflags(options, 'Options');
+    
+    var sources = this.data.sourceFiles;
+    
     grunt.log.writeln('Generating mox documentation for:' + JSON.stringify(sources) + '...');
     outputOptions(options);
-
-    var sources = this.data.sourceFiles;
 
     mox.run(sources,options,function(){
       grunt.log.writeln("Completed Generating Mox Documentation");
@@ -34,14 +35,17 @@ module.exports = function(grunt) {
 
   var outputOptions = function(options){
 
-    if(options.outputFile)
+    if(options.outputFile){
       grunt.verbose.writeln('Generating output markdown to file:' + options.outputFile);
+    }
     
-    if(options.htmlOutputFile)
+    if(options.htmlOutputFile){
       grunt.verbose.writeln('Generating output html to file:' + options.htmlOutputFile);
+    }
     
-    if(options.moxJsonFile)
+    if(options.moxJsonFile){
       grunt.verbose.writeln('Generating output mox json to file:' + options.moxJsonFile);
+    }
 
     grunt.verbose.writeln('Using template:' + options.template);
   };
