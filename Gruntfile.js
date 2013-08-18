@@ -55,7 +55,18 @@ module.exports = function(grunt) {
         }
       }
     },
-
+    release: {
+      options: {
+        bump: true, //default: true
+        file: "package.json", //default: package.json
+        add: true, 
+        commit: true,
+        tag: true,
+        push: true,
+        pushTags: true,
+        npm: true
+      }
+    },
     // Unit tests.
     nodeunit: {
       tests: ['test/*_test.js'],
@@ -67,6 +78,7 @@ module.exports = function(grunt) {
   grunt.loadTasks('tasks');
 
   // These plugins provide necessary tasks.
+  grunt.loadNpmTasks("grunt-release");
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-nodeunit');
@@ -77,5 +89,7 @@ module.exports = function(grunt) {
 
   // By default, lint and run all tests.
   grunt.registerTask('default', ['jshint', 'test']);
+
+  grunt.registerTask("deploy", ["release"]);
 
 };
