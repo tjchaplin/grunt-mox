@@ -26,8 +26,13 @@ In your project's Gruntfile, add a section named `mox` to the data object passed
 grunt.initConfig({
   mox: {
     your_target: {
-      outputFile:"outputFile.md",
-      sourceFiles: ['sourceFile1.js','sourceFile2.js']
+      sourceFiles : ['sourceFile1.js','sourceFile2.js'],
+      options: {
+        template : "default",
+        outputFile:"outputFile.md",
+        moxJsonFile : "moxJsonFile.json",
+        htmlFile : "htmlOutput.html"
+      }
     },
   },
 })
@@ -35,21 +40,33 @@ grunt.initConfig({
 
 ### Paramaters
 
-#### outputFile
-Type: `String`
-
-File to output dox documentation
-
 #### sourceFiles
 Type: `String | Array`
 
-Source file(s) location to get documentation from
+Source file(s) or directories to get documentation from
+
+### Options
 
 #### template
 Type: `String`
 Default: `default`
 
 Template used to generate documentation. Can be the path to a custom template or one of the predefined mox templates.  See [mox documentation](https://github.com/tchaplin/mox") for more details.
+
+#### outputFile
+Type: `String`
+
+File path to output mox markdown documentation.
+
+#### htmlFile
+Type: `String`
+
+File path to output dox html documentation.
+
+#### moxJsonFile
+Type: `String`
+
+File path to output dox json object. See [mox documentation](https://github.com/tchaplin/mox") for more details.
 
 ### Usage Examples
 
@@ -60,8 +77,10 @@ In this example, the default mox template will be used to generate documentation
 grunt.initConfig({
   mox: {
     your_target: {
-      outputFile:['sourceFile1.js','sourceFile2.js'],
-      sourceFiles: 'outputFilemd'
+      sourceFiles:['sourceFile1.js','sourceFile2.js']
+      options: {
+        outputFile: 'outputFile.md'
+      }
     },
   },
 })
@@ -74,9 +93,11 @@ In this example, the category mox template will be used to generate documentatio
 grunt.initConfig({
   mox: {
     your_target: {
-      outputFile:['sourceFile1.js','sourceFile2.js'],
-      sourceFiles: 'outputFilemd',
-      template: 'category'
+      sourceFiles:['sourceFile1.js','sourceFile2.js']
+      options: {
+        outputFile: 'outputFile.md',
+        template: 'category'
+      }
     },
   },
 })
@@ -89,9 +110,11 @@ In this example, a custom jade template will be used to generate documentation f
 grunt.initConfig({
   mox: {
     your_target: {
-      outputFile:['sourceFile1.js','sourceFile2.js'],
-      sourceFiles: 'outputFilemd',
-      template: 'someCustomTemplate.jade'
+      sourceFiles:['sourceFile1.js','sourceFile2.js']
+      options: {
+        outputFile: 'outputFile.md',
+        template: 'someCustomTemplate.jade'
+      }
     },
   },
 })

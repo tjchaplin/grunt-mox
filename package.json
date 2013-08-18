@@ -44,12 +44,12 @@
     "markdown",
     "md",
     "plugin",
-    "grunt"
+    "grunt",
     "documentation",
     "generator",
     "template"
   ],
   "dependencies": {
-    "mox": "0.0.2"
+    "mox": "0.0.4"
   }
 }

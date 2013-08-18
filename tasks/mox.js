@@ -16,22 +16,34 @@ module.exports = function(grunt) {
   // creation: http://gruntjs.com/creating-tasks
 
   grunt.registerMultiTask('mox', 'Grunt module for using mox( A markdown javascript documentation generator)', function() {
-    
+    var done = this.async();
     var options = this.options({});
-    
+
     grunt.verbose.writeflags(options, 'Options');
+    grunt.log.writeln('Generating mox documentation for:' + JSON.stringify(sources) + '...');
+    outputOptions(options);
 
     var sources = this.data.sourceFiles;
-    var template = this.data.template;
-    var outputFile = this.data.outputFile;
 
-    grunt.log.writeln('Generating mox documentation for:' + JSON.stringify(sources) + '...');
-    grunt.log.writeln('Generated output will be saved to:' + outputFile);
-    grunt.verbose.writeln('Using template:' + template);
-
-    mox.run(sources,outputFile,template);
-
-    grunt.log.ok();
+    mox.run(sources,options,function(){
+      grunt.log.writeln("Completed Generating Mox Documentation");
+      grunt.log.ok();
+      done();
+    });
   });
+
+  var outputOptions = function(options){
+
+    if(options.outputFile)
+      grunt.verbose.writeln('Generating output markdown to file:' + options.outputFile);
+    
+    if(options.htmlOutputFile)
+      grunt.verbose.writeln('Generating output html to file:' + options.htmlOutputFile);
+    
+    if(options.moxJsonFile)
+      grunt.verbose.writeln('Generating output mox json to file:' + options.moxJsonFile);
+
+    grunt.verbose.writeln('Using template:' + options.template);
+  };
 
 };

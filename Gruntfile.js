@@ -6,9 +6,8 @@
  * Licensed under the MIT license.
  */
 
-'use strict';
-
 module.exports = function(grunt) {
+  'use strict';
 
   // Project configuration.
   grunt.initConfig({
@@ -31,16 +30,28 @@ module.exports = function(grunt) {
     // Configuration to be run (and then tested).
     mox: {
       defaultTemplate: {
-        outputFile : "tmp/functionSomeClass.md",
-        sourceFiles : ['node_modules/mox/tests/fixtures/functionSomeClass.js'],
+        sourceFiles : ['test/fixtures/functionSomeClass.js'],
         options: {
+          outputFile : "tmp/functionSomeClass.md"
         }
       },
       definedTemplate: {
-        template : "category",
-        sourceFiles : ['node_modules/mox/tests/fixtures/functionSomeClass.js'],
-        outputFile : "tmp/templates/category/functionSomeClass.md",
+        sourceFiles : ['test/fixtures/functionSomeClass.js'],
         options: {
+          template : "category",
+          outputFile : "tmp/templates/category/functionSomeClass.md"
+        }
+      },
+      moxjsonOutputFile: {
+        sourceFiles : ['test/fixtures/functionSomeClass.js'],
+        options: {
+          moxFile : "tmp/functionSomeClass.json"
+        }
+      },
+      htmlOutputFile: {
+        sourceFiles : ['test/fixtures/functionSomeClass.js'],
+        options: {
+          htmlFile : "tmp/functionSomeClass.html"
         }
       }
     },

@@ -1,7 +1,7 @@
 'use strict';
 
 var grunt = require('grunt');
-
+var fs = require('fs');
 /*
   ======== A Handy Little Nodeunit Reference ========
   https://github.com/caolan/nodeunit
@@ -30,18 +30,32 @@ exports.mox = {
   defaultTemplate: function(test) {
     test.expect(1);
 
-    var actual = grunt.file.read('tmp/functionSomeClass.md');
-    var expected = grunt.file.read('node_modules/mox/tests/expected/functionSomeClass.md');
-    test.equal(actual, expected, 'should describe what the default behavior is.');
+    var doesFileExist = fs.existsSync('tmp/functionSomeClass.md');
+    test.equal(doesFileExist, true, 'should be able to use a default template.');
 
     test.done();
   },
   definedTemplate: function(test) {
     test.expect(1);
 
-    var actual = grunt.file.read('tmp/templates/category/functionSomeClass.md');
-    var expected = grunt.file.read('node_modules/mox/tests/expected/templates/category/functionSomeClass.md');
-    test.equal(actual, expected, 'should be able to use a defined template as a parameter.');
+    var doesFileExist = fs.existsSync('tmp/templates/category/functionSomeClass.md');
+    test.equal(doesFileExist, true, 'should be able to use a defined template as a parameter.');
+
+    test.done();
+  },
+  moxjsonOutputFile: function(test) {
+    test.expect(1);
+
+    var doesFileExist = fs.existsSync('tmp/functionSomeClass.json');
+    test.equal(doesFileExist, true, 'should be able to generate mox json file.');
+
+    test.done();
+  },
+  htmlOutputFile: function(test) {
+    test.expect(1);
+
+    var doesFileExist = fs.existsSync('tmp/functionSomeClass.html');
+    test.equal(doesFileExist, true, 'should be able to generate html file.');
 
     test.done();
   }
