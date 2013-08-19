@@ -2,6 +2,8 @@
 
 > Grunt module for using mox( A markdown javascript documentation generator)
 
+Check out the example mox output [here](https://github.com/tjchaplin/mox/tree/master/doc)
+
 ## Getting Started
 This plugin requires Grunt `~0.4.1`
 
