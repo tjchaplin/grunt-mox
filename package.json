@@ -1,7 +1,7 @@
 {
   "name": "grunt-mox",
   "description": "Grunt module for using mox( A markdown javascript documentation generator)",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/tchaplin/grunt-mox",
   "author": {
     "name": "tjchaplin",
