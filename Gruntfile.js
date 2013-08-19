@@ -53,6 +53,20 @@ module.exports = function(grunt) {
         options: {
           htmlFile : "tmp/functionSomeClass.html"
         }
+      },
+      nameOption: {
+        sourceFiles : ['test/fixtures/functionSomeClass.js'],
+        options: {
+          name:"Grunt-Mox",
+          outputFile : "tmp/withNameFunctionSomeClass.md"
+        }
+      },
+      versionOption: {
+        sourceFiles : ['test/fixtures/functionSomeClass.js'],
+        options: {
+          version:"v1.2",
+          outputFile : "tmp/withVersionFunctionSomeClass.md"
+        }
       }
     },
     release: {

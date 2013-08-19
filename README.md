@@ -28,6 +28,8 @@ grunt.initConfig({
     your_target: {
       sourceFiles : ['sourceFile1.js','sourceFile2.js'],
       options: {
+        name: "Grunt-Mox",
+        version:"0.1.0",
         template : "default",
         outputFile:"outputFile.md",
         moxJsonFile : "moxJsonFile.json",
@@ -46,6 +48,16 @@ Type: `String | Array`
 Source file(s) or directories to get documentation from
 
 ### Options
+
+#### name
+Type: `String`
+
+Name of application or project generating documentation for.
+
+#### version
+Type: `String`
+
+Version of documentation or application generating documentation for.
 
 #### template
 Type: `String`

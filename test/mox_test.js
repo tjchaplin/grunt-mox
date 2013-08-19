@@ -58,5 +58,22 @@ exports.mox = {
     test.equal(doesFileExist, true, 'should be able to generate html file.');
 
     test.done();
+  },
+  nameOption: function(test) {
+    test.expect(1);
+
+    var doesFileExist = fs.existsSync("tmp/withNameFunctionSomeClass.md");
+    test.equal(doesFileExist, true, 'should be able to generate file with name option.');
+
+    test.done();
+  },
+  versionOption: function(test) {
+    test.expect(1);
+
+    var doesFileExist = fs.existsSync("tmp/withVersionFunctionSomeClass.md");
+    test.equal(doesFileExist, true, 'should be able to generate file with version option.');
+
+    test.done();
   }
+
 };
