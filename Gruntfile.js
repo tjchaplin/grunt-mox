@@ -30,42 +30,42 @@ module.exports = function(grunt) {
     // Configuration to be run (and then tested).
     mox: {
       defaultTemplate: {
-        sourceFiles : ['test/fixtures/functionSomeClass.js'],
+        sourceFiles : ['./test/fixtures/functionSomeClass.js'],
         options: {
-          outputFile : "tmp/functionSomeClass.md"
+          outputFile : "./tmp/functionSomeClass.md"
         }
       },
       definedTemplate: {
-        sourceFiles : ['test/fixtures/functionSomeClass.js'],
+        sourceFiles : ['./test/fixtures/functionSomeClass.js'],
         options: {
           template : "category",
-          outputFile : "tmp/templates/category/functionSomeClass.md"
+          outputFile : "./tmp/templates/category/functionSomeClass.md"
         }
       },
       moxjsonOutputFile: {
-        sourceFiles : ['test/fixtures/functionSomeClass.js'],
+        sourceFiles : ['./test/fixtures/functionSomeClass.js'],
         options: {
-          moxFile : "tmp/functionSomeClass.json"
+          moxFile : "./tmp/functionSomeClass.json"
         }
       },
       htmlOutputFile: {
-        sourceFiles : ['test/fixtures/functionSomeClass.js'],
+        sourceFiles : ['./test/fixtures/functionSomeClass.js'],
         options: {
-          htmlFile : "tmp/functionSomeClass.html"
+          htmlFile : "./tmp/functionSomeClass.html"
         }
       },
       nameOption: {
-        sourceFiles : ['test/fixtures/functionSomeClass.js'],
+        sourceFiles : ['./test/fixtures/functionSomeClass.js'],
         options: {
           name:"Grunt-Mox",
-          outputFile : "tmp/withNameFunctionSomeClass.md"
+          outputFile : "./tmp/withNameFunctionSomeClass.md"
         }
       },
       versionOption: {
-        sourceFiles : ['test/fixtures/functionSomeClass.js'],
+        sourceFiles : ['./test/fixtures/functionSomeClass.js'],
         options: {
           version:"v1.2",
-          outputFile : "tmp/withVersionFunctionSomeClass.md"
+          outputFile : "./tmp/withVersionFunctionSomeClass.md"
         }
       }
     },

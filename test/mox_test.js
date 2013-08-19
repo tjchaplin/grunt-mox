@@ -30,7 +30,7 @@ exports.mox = {
   defaultTemplate: function(test) {
     test.expect(1);
 
-    var doesFileExist = fs.existsSync('tmp/functionSomeClass.md');
+    var doesFileExist = fs.existsSync('./tmp/functionSomeClass.md');
     test.equal(doesFileExist, true, 'should be able to use a default template.');
 
     test.done();
@@ -38,7 +38,7 @@ exports.mox = {
   definedTemplate: function(test) {
     test.expect(1);
 
-    var doesFileExist = fs.existsSync('tmp/templates/category/functionSomeClass.md');
+    var doesFileExist = fs.existsSync('./tmp/templates/category/functionSomeClass.md');
     test.equal(doesFileExist, true, 'should be able to use a defined template as a parameter.');
 
     test.done();
@@ -46,7 +46,7 @@ exports.mox = {
   moxjsonOutputFile: function(test) {
     test.expect(1);
 
-    var doesFileExist = fs.existsSync('tmp/functionSomeClass.json');
+    var doesFileExist = fs.existsSync('./tmp/functionSomeClass.json');
     test.equal(doesFileExist, true, 'should be able to generate mox json file.');
 
     test.done();
@@ -54,7 +54,7 @@ exports.mox = {
   htmlOutputFile: function(test) {
     test.expect(1);
 
-    var doesFileExist = fs.existsSync('tmp/functionSomeClass.html');
+    var doesFileExist = fs.existsSync('./tmp/functionSomeClass.html');
     test.equal(doesFileExist, true, 'should be able to generate html file.');
 
     test.done();
@@ -62,7 +62,7 @@ exports.mox = {
   nameOption: function(test) {
     test.expect(1);
 
-    var doesFileExist = fs.existsSync("tmp/withNameFunctionSomeClass.md");
+    var doesFileExist = fs.existsSync("./tmp/withNameFunctionSomeClass.md");
     test.equal(doesFileExist, true, 'should be able to generate file with name option.');
 
     test.done();
@@ -70,7 +70,7 @@ exports.mox = {
   versionOption: function(test) {
     test.expect(1);
 
-    var doesFileExist = fs.existsSync("tmp/withVersionFunctionSomeClass.md");
+    var doesFileExist = fs.existsSync("./tmp/withVersionFunctionSomeClass.md");
     test.equal(doesFileExist, true, 'should be able to generate file with version option.');
 
     test.done();

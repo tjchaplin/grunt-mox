@@ -4,6 +4,8 @@
 
 Check out the example mox output [here](https://github.com/tjchaplin/mox/tree/master/doc)
 
+[![Build Status](https://travis-ci.org/tjchaplin/grunt-mox.png?branch=master)](https://travis-ci.org/tjchaplin/grunt-mox)
+
 ## Getting Started
 This plugin requires Grunt `~0.4.1`
 
