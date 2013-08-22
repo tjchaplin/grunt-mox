@@ -67,7 +67,7 @@ Version of documentation or application generating documentation for.
 Type: `String`
 Default: `default`
 
-Template used to generate documentation. Can be the path to a custom template or one of the predefined mox templates.  See [mox documentation](https://github.com/tjchaplin/mox") for more details.
+Template used to generate documentation. Can be the path to a custom template or one of the predefined mox templates.  See [mox documentation](https://github.com/tjchaplin/mox) for more details.
 
 #### outputFile
 Type: `String`
@@ -82,7 +82,7 @@ File path to output dox html documentation.
 #### moxJsonFile
 Type: `String`
 
-File path to output dox json object. See [mox documentation](https://github.com/tjchaplin/mox") for more details.
+File path to output dox json object. See [mox documentation](https://github.com/tjchaplin/mox) for more details.
 
 ### Usage Examples
 
