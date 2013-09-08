@@ -6,6 +6,8 @@ Check out the example mox output [here](https://github.com/tjchaplin/mox/tree/ma
 
 [![Build Status](https://travis-ci.org/tjchaplin/grunt-mox.png?branch=master)](https://travis-ci.org/tjchaplin/grunt-mox)
 
+[![NPM](https://nodei.co/npm/grunt-mox.png?downloads=true)](https://nodei.co/npm/grunt-mox/)
+
 ## Getting Started
 This plugin requires Grunt `~0.4.1`
 
