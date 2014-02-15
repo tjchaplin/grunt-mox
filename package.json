@@ -1,7 +1,7 @@
 {
   "name": "grunt-mox",
   "description": "Grunt module for using mox( A markdown javascript documentation generator)",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "homepage": "https://github.com/tjchaplin/grunt-mox",
   "author": {
     "name": "tjchaplin",
@@ -29,14 +29,14 @@
     "test": "grunt test"
   },
   "devDependencies": {
-    "grunt-contrib-jshint": "~0.6.0",
-    "grunt-contrib-clean": "~0.4.0",
-    "grunt-contrib-nodeunit": "~0.2.0",
-    "grunt": "~0.4.1",
-    "grunt-release": "~0.5.1"
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-nodeunit": "~0.3.1",
+    "grunt": "~0.4.2",
+    "grunt-release": "~0.7.0"
   },
   "peerDependencies": {
-    "grunt": "~0.4.1"
+    "grunt": "~0.4.2"
   },
   "keywords": [
     "gruntplugin",
