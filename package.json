@@ -51,6 +51,6 @@
     "template"
   ],
   "dependencies": {
-    "mox": "0.0.8"
+    "mox": "0.0.10"
   }
 }
