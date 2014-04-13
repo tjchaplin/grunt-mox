@@ -26,7 +26,11 @@ module.exports = function(grunt) {
     grunt.log.writeln('Generating mox documentation for:' + JSON.stringify(sources) + '...');
     outputOptions(options);
 
-    mox.run(sources,options,function(){
+    mox.run(sources,options,function(error){
+      if(error){
+        grunt.log.errorlns(error)
+        done();
+      }
       grunt.log.writeln("Completed Generating Mox Documentation");
       grunt.log.ok();
       done();
